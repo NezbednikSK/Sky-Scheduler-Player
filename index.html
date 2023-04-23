@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>Sky Oldies</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="blob.js"></script>
+    <script src="resizing.js"></script>
+    <script>
+        var api = document.createElement("script");
+        api.src = "https://www.youtube.com/iframe_api";
+        document.currentScript.parentElement.insertBefore(api, document.currentScript);
+    </script>
+
+    <div class="player" id="player">
+        <div id="ytplayerwrapper">
+            <div id="ytplayer"></div>
+        </div>
+        <img src="logo.png" class="logo logo_h" id="logo"/>
+        <div class="clickblocker"></div>
+    </div>
+    
+    <div class="bar">
+        <a href="about:blank" onclick="event.preventDefault(); fullscreen_func();" class="barlink">fullscreen</a>
+    </div>
+    
+    <div style="display: none;">
+        <pre id="debugid"></pre>
+        <button id="debugnext">
+    </div>
+</html>
